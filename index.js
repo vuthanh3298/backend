@@ -28,6 +28,8 @@ var donHangApiRoute = require('./routes/donhang.route');
 app.use('/api/donhangs', donHangApiRoute);
 var userAppApiRoute = require('./routes/userapp.route');
 app.use('/api/users', userAppApiRoute);
+var gioHangApiRoute = require('./routes/giohang.route');
+app.use('/api/giohangs', gioHangApiRoute);
 
 //var authMiddleware = require('./middlewares/auth.middleware');
 
@@ -35,5 +37,5 @@ app.get('/', function(req, res) {
     res.send('This is API Backend Android Page');
 });
 app.listen(port, function() {
-    console.log('Example app listening on port' + port);
+    console.log('Example app listening on port ' + port);
 });

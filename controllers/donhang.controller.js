@@ -28,15 +28,15 @@ module.exports.index = async function(req, res) {
 module.exports.create = async function(req, res) {
     var donhang = new DonHang({
         user_id: req.query.user_id,
-        sanpham_id: req.query.sanpham_id,
-        soluong: req.query.soluong,
-        daxuat: req.query.daxuat,
-        danhan: req.query.danhan
+        sanPham_id: req.query.sanPham_id,
+        soLuong: req.query.soLuong,
+        thanhTien: req.query.thanhTien,
+        daXuat: req.query.daXuat
     })
     var don_hang = await DonHang.create(donhang);
     if (don_hang) {
-        res.json(don_hang);
+        res.send('success');
     } else {
-        res.send("");
+        res.send('error');
     }
 }

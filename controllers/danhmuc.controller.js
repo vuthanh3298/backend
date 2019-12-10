@@ -8,10 +8,10 @@ module.exports.index = async function(req, res) {
     } else {
         danhmucs = await DanhMuc.find();
     }
-    res.json(danhmucs);
+    return res.json(danhmucs);
 }
 
 module.exports.create = async function(req, res) {
     var danhmuc = await DanhMuc.create(req.body);
-    res.json(danhmuc);
+    return res.json(danhmuc);
 }

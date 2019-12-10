@@ -8,6 +8,6 @@ var userSchema = new mongoose.Schema({
     address: String
 });
 
-var User = mongoose.model('User', userSchema, 'users');
+var User = mongoose.model('User', userSchema, 'userapp');
 
 module.exports = User;

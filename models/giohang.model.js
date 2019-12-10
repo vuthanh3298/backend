@@ -2,10 +2,11 @@ var mongoose = require('mongoose');
 
 var gioHangSchema = new mongoose.Schema({
     user_id: String,
-    sanpham_id: String,
-    soluong: String,
+    sanPham_id: String,
+    soLuong: String,
     thanhTien: String,
-    daXuat: Boolean
+    daXuat: Boolean,
+    hinh: String
 });
 
 var GioHang = mongoose.model('GioHang', gioHangSchema, 'giohangs');
