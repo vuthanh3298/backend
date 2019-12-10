@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGODB_URI);
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json())
